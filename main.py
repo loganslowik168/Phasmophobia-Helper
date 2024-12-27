@@ -4,6 +4,7 @@ import tkinter as tk
 import tkinter.ttk as ttk
 
 # Class imports
+import setup as SetupFunctions
 from evidence import Evidence
 from ghosts import Ghosts
 
@@ -30,29 +31,8 @@ helpmenu.add_command(label='About')
 ''' 
 
 
-# Evidence buttons
-EvidenceButtons = []
-gridIndex = 0
-NUM_COLUMNS = 2
-for e in Evidence:
-    b = tk.Button(EvidenceFrame, text=e.value)
-    EvidenceButtons.append(b)
-    row = math.floor(gridIndex / NUM_COLUMNS)
-    col = gridIndex % NUM_COLUMNS
-    b.grid(row=row,column=col)
-    gridIndex += 1
-
-# Ghost buttons
-GhostButtons = []
-gridIndex = 0
-NUM_COLUMNS = 3
-for g in Ghosts:
-    b = tk.Button(GhostsFrame, text=g.name)
-    GhostButtons.append(b)
-    row = math.floor(gridIndex / NUM_COLUMNS)
-    col = gridIndex % NUM_COLUMNS
-    b.grid(row=row,column=col)
-    gridIndex += 1
+EvidenceButtons = SetupFunctions.CreateEvidenceButtons(EvidenceFrame=EvidenceFrame)
+GhostButtons = SetupFunctions.CreateGhostsButtons(GhostsFrame=GhostsFrame)
 
 
 EvidenceFrame.grid(row=0,column=0)
