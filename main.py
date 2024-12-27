@@ -5,6 +5,7 @@ import tkinter.ttk as ttk
 
 # Class imports
 import setup as SetupFunctions
+import buttonFunctions as ButtonFunctions
 from evidence import Evidence
 from ghosts import Ghosts
 
@@ -30,11 +31,18 @@ menu.add_cascade(label='Help', menu=helpmenu)
 helpmenu.add_command(label='About')
 ''' 
 
-
+# Create buttons
 EvidenceButtons = SetupFunctions.CreateEvidenceButtons(EvidenceFrame=EvidenceFrame)
 GhostButtons = SetupFunctions.CreateGhostsButtons(GhostsFrame=GhostsFrame)
 
+# Bind buttons-
+for button_name,button in EvidenceButtons.items():
+    button.bind("<Button-1>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('affirm', btn))
+    button.bind("<Button-2>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('suspect', btn))
+    button.bind("<Button-3>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('reject', btn))
 
+
+# Draw buttons+
 EvidenceFrame.grid(row=0,column=0)
 ttk.Separator(root,orient='horizontal').grid(row=1, columnspan=3,sticky='ew')
 GhostsFrame.grid(row=2,column=0)

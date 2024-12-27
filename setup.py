@@ -37,3 +37,4 @@ def CreateGhostsButtons(GhostsFrame):
         b_value.grid(row=row,column=col)
         gridIndex += 1
     return GhostButtons
+
