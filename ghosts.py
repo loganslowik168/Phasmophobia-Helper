@@ -23,7 +23,12 @@ class Ghosts(Enum):
     Shade = [e.Writing,e.EMF,e.Freezing]
     Spirit = [e.Writing,e.EMF,e.Box]
     Thaye = [e.DOTS,e.Writing,e.Orbs]
-    Mimic = [e.UV,e.Freezing,e.Box]
+
+    # It's always bothered me how traditional tracking doesn't include ghost orbs in the evidence tracket.  It just creates more work.
+    # It causes me to constantly have to check the 'Ghosts' tab in the journal to see which 3 evidence the Mimic possesses officially.
+    # I will be marking Mimic as having all four evidence.  I generally find this to be more intuitive when marking it down in the journal.
+    Mimic = [e.UV,e.Freezing,e.Box,e.Orbs]
+
     Twins = [e.EMF,e.Freezing,e.Box]
     Wraith = [e.DOTS,e.EMF,e.Box]
     Yokai = [e.DOTS,e.Orbs,e.Box]

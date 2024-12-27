@@ -6,6 +6,7 @@ import tkinter.ttk as ttk
 # Class imports
 import setup as SetupFunctions
 import buttonFunctions as ButtonFunctions
+import logic as LogicFunctions
 from evidence import Evidence
 from ghosts import Ghosts
 
@@ -41,8 +42,10 @@ for _,button in EvidenceButtons.items():
     button.bind("<Button-2>", lambda event, btn=button: ButtonFunctions.ChangeState('suspect', btn))
     button.bind("<Button-3>", lambda event, btn=button: ButtonFunctions.ChangeState('reject', btn))
 
+LogicFunctions.UpdateAllData(GhostButtons=GhostButtons,GhostDeterminations=None)
 
-# Draw buttons+
+
+# Draw buttons
 EvidenceFrame.grid(row=0,column=0)
 ttk.Separator(root,orient='horizontal').grid(row=1, columnspan=3,sticky='ew')
 GhostsFrame.grid(row=2,column=0)
