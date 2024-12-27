@@ -2,7 +2,7 @@
 import tkinter as tk
 
 
-def ButtonStateChange(newState, button):
+def ChangeState(newState, button):
     if newState == 'affirm':
         color = 'green'
         colorHovering = '#66b266'

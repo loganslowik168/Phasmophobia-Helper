@@ -36,10 +36,10 @@ EvidenceButtons = SetupFunctions.CreateEvidenceButtons(EvidenceFrame=EvidenceFra
 GhostButtons = SetupFunctions.CreateGhostsButtons(GhostsFrame=GhostsFrame)
 
 # Bind buttons-
-for button_name,button in EvidenceButtons.items():
-    button.bind("<Button-1>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('affirm', btn))
-    button.bind("<Button-2>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('suspect', btn))
-    button.bind("<Button-3>", lambda event, btn=button: ButtonFunctions.ButtonStateChange('reject', btn))
+for _,button in EvidenceButtons.items():
+    button.bind("<Button-1>", lambda event, btn=button: ButtonFunctions.ChangeState('affirm', btn))
+    button.bind("<Button-2>", lambda event, btn=button: ButtonFunctions.ChangeState('suspect', btn))
+    button.bind("<Button-3>", lambda event, btn=button: ButtonFunctions.ChangeState('reject', btn))
 
 
 # Draw buttons+
