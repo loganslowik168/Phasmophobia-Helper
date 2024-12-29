@@ -9,7 +9,6 @@ def PrintGhostData(GhostButtons,GhostDeterminations):
         print(" ")
 
 def ReevaluatePossibleGhosts(ev):
-    for ghost in Ghosts:
-        print(f"{ev}")
-        print(f"if {Evidence[ev].key} in {ghost.value}:")
-
+    for ghostName, ghostEvidence in Ghosts.items():
+        if ev in ghostEvidence:
+            print(f"{ghostName} is a target!")

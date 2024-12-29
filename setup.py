@@ -12,9 +12,8 @@ def CreateEvidenceButtons(EvidenceFrame):
     gridIndex = 0
     NUM_COLUMNS = 2
     for e in Evidence:
-        b_key = e.value
-        b_value = tk.Button(EvidenceFrame, text=e.value)
-        EvidenceButtons[b_key]=b_value
+        b_value = tk.Button(EvidenceFrame, text=e)
+        EvidenceButtons[e]=b_value
         
         row = math.floor(gridIndex / NUM_COLUMNS)
         col = gridIndex % NUM_COLUMNS

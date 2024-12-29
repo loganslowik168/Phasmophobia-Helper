@@ -2,6 +2,9 @@
 from evidence import Marks
 
 # All ghosts initialized to Marks.UNMARKED
+EvidenceData = {
+    
+}
 GhostData = {
     "Spirit": Marks.UNMARKED,
     "Wraith": Marks.UNMARKED,

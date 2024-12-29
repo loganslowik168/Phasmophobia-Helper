@@ -2,33 +2,33 @@
 from evidence import Evidence as e
 
 Ghosts = {
-    "Spirit": [e.Writing, e.EMF, e.Box],
-    "Wraith": [e.DOTS, e.EMF, e.Box],
-    "Phantom": [e.DOTS, e.UV, e.Box],
-    "Poltergeist": [e.Writing, e.UV, e.Box],
-    "Banshee": [e.DOTS, e.Orbs, e.UV],
-    "Jinn": [e.EMF, e.UV, e.Freezing],
-    "Mare": [e.Writing, e.Orbs, e.Box],
-    "Revenant": [e.Writing, e.Orbs, e.Freezing],
-    "Shade": [e.Writing, e.EMF, e.Freezing],
-    "Demon": [e.Writing, e.UV, e.Freezing],
-    "Yurei": [e.DOTS, e.Orbs, e.Freezing],
-    "Oni": [e.DOTS, e.EMF, e.Freezing],
-    "Yokai": [e.DOTS, e.Orbs, e.Box],
-    "Hantu": [e.Orbs, e.UV, e.Freezing],
-    "Goryo": [e.DOTS, e.EMF, e.UV],
-    "Myling": [e.Writing, e.EMF, e.UV],
-    "Onryo": [e.Orbs, e.Freezing, e.Box],
-    "Twins": [e.EMF, e.Freezing, e.Box],
-    "Raiju": [e.DOTS, e.EMF, e.Orbs],
-    "Obake": [e.EMF, e.Orbs, e.UV],
+    "Spirit": ['Ghost Writing', 'EMF Level 5', 'Spirit Box'],
+    "Wraith": ['D.O.T.S Projector', 'EMF Level 5', 'Spirit Box'],
+    "Phantom": ['D.O.T.S Projector', 'Ultraviolet', 'Spirit Box'],
+    "Poltergeist": ['Ghost Writing', 'Ultraviolet', 'Spirit Box'],
+    "Banshee": ['D.O.T.S Projector', 'Ghost Orb', 'Ultraviolet'],
+    "Jinn": ['EMF Level 5', 'Ultraviolet', 'Freezing Temperatures'],
+    "Mare": ['Ghost Writing', 'Ghost Orb', 'Spirit Box'],
+    "Revenant": ['Ghost Writing', 'Ghost Orb', 'Freezing Temperatures'],
+    "Shade": ['Ghost Writing', 'EMF Level 5', 'Freezing Temperatures'],
+    "Demon": ['Ghost Writing', 'Ultraviolet', 'Freezing Temperatures'],
+    "Yurei": ['D.O.T.S Projector', 'Ghost Orb', 'Freezing Temperatures'],
+    "Oni": ['D.O.T.S Projector', 'EMF Level 5', 'Freezing Temperatures'],
+    "Yokai": ['D.O.T.S Projector', 'Ghost Orb', 'Spirit Box'],
+    "Hantu": ['Ghost Orb', 'Ultraviolet', 'Freezing Temperatures'],
+    "Goryo": ['D.O.T.S Projector', 'EMF Level 5', 'Ultraviolet'],
+    "Myling": ['Ghost Writing', 'EMF Level 5', 'Ultraviolet'],
+    "Onryo": ['Ghost Orb', 'Freezing Temperatures', 'Spirit Box'],
+    "Twins": ['EMF Level 5', 'Freezing Temperatures', 'Spirit Box'],
+    "Raiju": ['D.O.T.S Projector', 'EMF Level 5', 'Ghost Orb'],
+    "Obake": ['EMF Level 5', 'Ghost Orb', 'Ultraviolet'],
 
     # It's always bothered me how traditional tracking doesn't include ghost orbs in the evidence tracket.  It just creates more work.
     # It causes me to constantly have to check the 'Ghosts' tab in the journal to see which 3 evidence the Mimic possesses officially.
     # I will be marking Mimic as having all four evidence.  I generally find this to be more intuitive when marking it down in the journal.
-    "Mimic": [e.UV, e.Freezing, e.Box, e.Orbs],
+    "Mimic": ['Ultraviolet', 'Freezing Temperatures', 'Spirit Box', 'Ghost Orb'],
 
-    "Moroi": [e.Writing, e.Freezing, e.Box],
-    "Deogen": [e.DOTS, e.Writing, e.Box],
-    "Thaye": [e.DOTS, e.Writing, e.Orbs]
+    "Moroi": ['Ghost Writing', 'Freezing Temperatures', 'Spirit Box'],
+    "Deogen": ['D.O.T.S Projector', 'Ghost Writing', 'Spirit Box'],
+    "Thaye": ['D.O.T.S Projector', 'Ghost Writing', 'Ghost Orb']
 }
