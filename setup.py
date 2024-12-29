@@ -28,9 +28,8 @@ def CreateGhostsButtons(GhostsFrame):
     gridIndex = 0
     NUM_COLUMNS = 3
     for g in Ghosts:
-        b_key = g.name
-        b_value = tk.Button(GhostsFrame, text=g.name)
-        GhostButtons[b_key]=b_value
+        b_value = tk.Button(GhostsFrame, text=g)
+        GhostButtons[g]=b_value
         
         row = math.floor(gridIndex / NUM_COLUMNS)
         col = gridIndex % NUM_COLUMNS
