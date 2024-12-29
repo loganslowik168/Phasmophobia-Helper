@@ -27,10 +27,10 @@ EvidenceButtons = SetupFunctions.CreateEvidenceButtons(EvidenceFrame=EvidenceFra
 GhostButtons = SetupFunctions.CreateGhostsButtons(GhostsFrame=GhostsFrame)
 
 # Bind buttons-
-for evidence, button in EvidenceButtons.items():
-    button.bind("<Button-1>", lambda event, btn=button, ev=evidence: ButtonFunctions.ChangeEvidenceState('affirm', btn, ev))
-    button.bind("<Button-2>", lambda event, btn=button, ev=evidence: ButtonFunctions.ChangeEvidenceState('suspect', btn, ev))
-    button.bind("<Button-3>", lambda event, btn=button, ev=evidence: ButtonFunctions.ChangeEvidenceState('reject', btn, ev))
+for b in EvidenceButtons:
+    b.button.bind("<Button-1>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('affirm', btn))
+    b.button.bind("<Button-2>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('suspect', btn))
+    b.button.bind("<Button-3>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('reject', btn))
 
 
 # LogicFunctions.PrintGhostData(GhostButtons=GhostButtons,GhostDeterminations=None)

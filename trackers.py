@@ -3,8 +3,16 @@ from evidence import Marks
 
 # All ghosts initialized to Marks.UNMARKED
 EvidenceData = {
-    
+    'EMF Level 5': Marks.UNMARKED,
+    'Ultraviolet': Marks.UNMARKED,
+    'Ghost Writing': Marks.UNMARKED,
+    'Freezing Temperatures': Marks.UNMARKED,
+    'D.O.T.S Projector': Marks.UNMARKED,
+    'Ghost Orb': Marks.UNMARKED,
+    'Spirit Box': Marks.UNMARKED
 }
+
+
 GhostData = {
     "Spirit": Marks.UNMARKED,
     "Wraith": Marks.UNMARKED,
