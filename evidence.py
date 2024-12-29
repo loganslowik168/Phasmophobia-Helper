@@ -8,3 +8,9 @@ class Evidence(Enum):
     DOTS = 'D.O.T.S Projector'
     Orbs = 'Ghost Orb'
     Box = 'Spirit Box'
+
+class Marks(Enum):
+    POSITIVE = 1
+    NEGATIVE = -1
+    UNMARKED = 0
+    SUSPICIOUS = 99
