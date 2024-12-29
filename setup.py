@@ -6,6 +6,7 @@ import tkinter as tk
 from evidence import Evidence
 from ghosts import Ghosts
 from button import Button
+from trackers import InitEvidenceTracker, InitGhostTracker
 
 def CreateEvidenceButtons(EvidenceFrame):
     # Evidence buttons
@@ -37,3 +38,7 @@ def CreateGhostsButtons(GhostsFrame):
         gridIndex += 1
     return GhostButtons
 
+
+def InitTrackers():
+    InitEvidenceTracker()
+    InitGhostTracker()

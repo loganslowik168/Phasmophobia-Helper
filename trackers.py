@@ -1,6 +1,6 @@
 # Lib imports
-from evidence import Marks
-
+from evidence import Marks, Evidence
+from ghosts import Ghosts
 # All ghosts initialized to Marks.UNMARKED
 EvidenceData = {
     'EMF Level 5': Marks.UNMARKED,
@@ -39,3 +39,10 @@ GhostData = {
     "Deogen": Marks.UNMARKED,
     "Thaye": Marks.UNMARKED
 }
+
+def InitEvidenceTracker():
+    for e in Evidence:
+        EvidenceData[e] = Marks.UNMARKED
+def InitGhostTracker():
+    for g in Ghosts.keys():
+        GhostData[g] = Marks.UNMARKED

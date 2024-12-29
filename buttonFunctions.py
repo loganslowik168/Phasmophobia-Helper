@@ -5,7 +5,7 @@ from logic import ReevaluatePossibleGhosts
 from trackers import EvidenceData
 from evidence import Marks
 
-def ChangeEvidenceState(newState, button):
+def ChangeEvidenceState(newState, button, evidenceButtons, ghostButtons):
     newButtonState = None
     if newState == 'affirm':
         color = bc.AFFIRM_COLOR.value
@@ -29,4 +29,4 @@ def ChangeEvidenceState(newState, button):
     button.state = newButtonState
     button.button.config(bg=color, activebackground=colorHovering)
     EvidenceData[button.text] = newButtonState
-    ReevaluatePossibleGhosts(button.text)
+    ReevaluatePossibleGhosts(evidenceButtons, ghostButtons)

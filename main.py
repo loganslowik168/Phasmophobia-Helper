@@ -18,9 +18,9 @@ root.title('Phasmophobia Helper')
 EvidenceFrame = tk.Frame(root)
 GhostsFrame = tk.Frame(root)
 
+SetupFunctions.InitTrackers()
 # Tracker stuff
 ghostData = GhostData
-
 
 # Create buttons
 EvidenceButtons = SetupFunctions.CreateEvidenceButtons(EvidenceFrame=EvidenceFrame)
@@ -28,9 +28,9 @@ GhostButtons = SetupFunctions.CreateGhostsButtons(GhostsFrame=GhostsFrame)
 
 # Bind buttons-
 for b in EvidenceButtons:
-    b.button.bind("<Button-1>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('affirm', btn))
-    b.button.bind("<Button-2>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('suspect', btn))
-    b.button.bind("<Button-3>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('reject', btn))
+    b.button.bind("<Button-1>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('affirm', btn, EvidenceButtons, GhostButtons))
+    b.button.bind("<Button-2>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('suspect', btn, EvidenceButtons, GhostButtons))
+    b.button.bind("<Button-3>", lambda event, btn=b: ButtonFunctions.ChangeEvidenceState('reject', btn, EvidenceButtons, GhostButtons))
 
 
 # LogicFunctions.PrintGhostData(GhostButtons=GhostButtons,GhostDeterminations=None)

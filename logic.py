@@ -1,6 +1,8 @@
 # Class imports
-from evidence import Evidence
+from evidence import Evidence, Marks
 from ghosts import Ghosts
+from trackers import EvidenceData
+
 def PrintGhostData(GhostButtons,GhostDeterminations):
     for evidence in Evidence:
         for ghost,_ in GhostButtons.items():
@@ -8,7 +10,7 @@ def PrintGhostData(GhostButtons,GhostDeterminations):
                 print(f"Ghost {ghost} has evidence {evidence}")
         print(" ")
 
-def ReevaluatePossibleGhosts(ev):
-    for ghostName, ghostEvidence in Ghosts.items():
-        if ev in ghostEvidence:
-            print(f"{ghostName} is a target!")
+def ReevaluatePossibleGhosts(evidenceButtons, ghostButtons):
+    for button in evidenceButtons:
+        targetEvidenceState = button.state
+        
